@@ -7,7 +7,7 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400&display=swap" rel="stylesheet">
 
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js">
+    
 
     
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
@@ -26,42 +26,54 @@
             
       </nav>
 
+      <div class="register-photo">
+          <div class="form-container">
+              <div class="image-holder"></div>
+              
+              <form action="#" method="post" >
+                  <h4 style="display:inline;color:black"><b>Choose Server Location</h4>
+                  <br>
+                  <br>
+                  <label for="location">Select Location</label>
+                      
+                  
+                  <select id="location" name="location" >
+                      <option value="none" selected disabled hidden>
+                          Select
+                      </option>
+                     
+                      <option  value="USA">USA</option>
+                      <option value="Singapore">Singapore</option>
+              
+                    </select>
+                    <br><br>
+                    <div id="hide">
+                    <label for="city">Select City</label>
+                      
+                  
+                      <select id="city" name="city">
+                          <option value="none" selected disabled hidden>
+                              Select
+                          </option>
+                          
+                  
+                        </select>
+                      </div>
+                  
+                      
+                
+  <br>
+                <input class="button" type="submit" style="vertical-align:middle"  value="Next" >
   
-  <div class="content">
-    <div class="container">
-      <div class="row">
-        
-        <div class="col-md-6 contents" style="margin:0 auto;">
-          <div class="row justify-content-center">
-            <div class="col-md-8 " id="formborder">
-              <div class="mb-4">
-              <h3>Choose Server Location</h3>
-              
-            </div>
-            <br>
-                    
-            <form action="#" method="post" >
-
-                <label for="location"><b>Select Location</label>
-                    
+  
                 
-                <select id="location" name="location">
-                    <option id="USA" value="australia">USA</option>
-                    <option value="canada">Singapore</option>
-            
-                  </select>
-                
-              <br>
-              <br>
-              <br>
+               
+              </form>
+          </div>
+      </div>
+  
+           
               
-
-              <input class="button" type="submit" style="vertical-align:middle"  value="Next" >
-
-
-              
-             
-            </form>
             </div>
           </div>
           
@@ -77,15 +89,8 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <script src="js/main.js"></script>
     <script>
-        var elements = document.getElementsByClassName('dropdown-item');
+      
 
-        Array.from(elements).forEach((element) => {
-            element.addEventListener('click', (event) => {
-                event.preventDefault()
-                document.querySelector('#locationDropDown').textContent=event.target.innerText
-                console.log(` ${event.target.innerText}!`);
-            });
-        });
         $(window).scroll(function () {
             if ($(window).scrollTop() >= 50) {
             $('.navbar').css('opacity','0.9');
@@ -94,7 +99,49 @@
               $('.navbar').css('opacity','1');
             }
             });
+            var USA=["texas","arizona","new york"];
+            var singapore=["Yishun","jurong","clementi"];
+            var city=document.getElementById('city');
+            var node = document.createElement("OPTION");
+            document.getElementById("location").onchange=()=>{
+
+
+            var location=document.getElementById('location').value;
+            
+           
+            
+            if(location=="USA"){
+              USA.forEach((x)=>{
+              
+                var option=document.createElement('option')
+                option.value=x
+                option.text=x
+            city.appendChild(option)
+              })
+              
+            }
+            else{
+              singapore.forEach((x)=>{
+
+                node.appendChild(document.createTextNode(x));
+                city.appendChild(node);
+              })
+              
+            }
+
+            
+
+
+            
+
+
+             document.getElementById("hide").style.display='block'
+          }
       
+    </script>
+    <script>
+
+
     </script>
   </body>
 </html>
