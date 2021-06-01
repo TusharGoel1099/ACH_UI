@@ -1,147 +1,186 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400&display=swap" rel="stylesheet">
 
+<head>
 
-    
+	<title>ACH</title>
 
-    
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="./rtds2.css">
+	<meta charset="UTF-8">
 
-    <title>ACH</title>
-      
-    
-  </head>
-  <body>
-    <nav class="navbar fixed-top navbar-light" style="background-color: rgba(44,44,44,2)">
-        <div class="container-fluid">
-            <a class="navbar-brand " style="margin-left:24px"href="#"><img src="https://www.acecloudhosting.com/wp-content/uploads/2018/08/ace-white-logo.png" alt="" width="95" height="47"> </a>
-            
-      </nav>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-      <div class="register-photo">
-          <div class="form-container">
-              <div class="image-holder"></div>
-              
-              <form action="#" method="post" >
-                  <h4 style="display:inline;color:black"><b>Choose Server Location</h4>
-                  <br>
-                  <br>
-                  <label for="location">Select Location</label>
-                      
-                  
-                  <select id="location" name="location" >
-                      <option value="none" selected disabled hidden>
-                          Select
-                      </option>
-                     
-                      <option  value="USA">USA</option>
-                      <option value="Singapore">Singapore</option>
-              
-                    </select>
-                    <br><br>
-                    <div id="hide">
-                    <label for="city">Select City</label>
-                      
-                  
-                      <select id="city" name="city">
-                          <option value="none" selected disabled hidden>
-                              Select
-                          </option>
-                          
-                  
-                        </select>
-                      </div>
-                  
-                      
-                
-  <br>
-                <input class="button" type="submit" style="vertical-align:middle"  value="Next" >
-  
-  
-                
-               
-              </form>
-          </div>
-      </div>
-  
-           
-              
-            </div>
-          </div>
+	<meta http-equiv='cache-control' content='no-cache'>
+
+	<meta http-equiv='expires' content='0'>
+
+	<meta http-equiv='pragma' content='no-cache'>
+	
+	<link rel="stylesheet" type="text/css" href="./rtds2.css">
+
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,400&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+</head>
+
+<body style="background-color: #666666;">
+		
+		<div class="container-login100">
+
+			<div class="limiter">
+
+				<div>
+
+					<nav class="navbar navbar-expand-md py-2 navbar-light shadow-sm" style="background-color: rgba(44,44,44,2)">
+
+						<div class="container-fluid">
+
+							<a class="navbar-brand " style="margin-left:50px" href="#"><img src="https://www.acecloudhosting.com/wp-content/uploads/2018/08/ace-white-logo.png" alt="" width="120" height="60"> </a>
+							
+					  </nav>
+
+					</div>
+
+					<div class="wrap-login100">
+				
+				<form class="login100-form validate-form" onsubmit="return setAction(this)">
           
-        </div>
-        
-      </div>
-    </div>
-  </div>
-  
+					<span class="login100-form-title p-b-43">
 
-  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-    <script src="js/main.js"></script>
-    <script>
-      
+						Select Server Location
 
-        $(window).scroll(function () {
-            if ($(window).scrollTop() >= 50) {
-            $('.navbar').css('opacity','0.9');
-            } 
-            else{
-              $('.navbar').css('opacity','1');
-            }
-            });
-            var USA=["texas","arizona","new york"];
-            var singapore=["Yishun","jurong","clementi"];
-            var city=document.getElementById('city');
-            var node = document.createElement("OPTION");
-            document.getElementById("location").onchange=()=>{
+					</span>
 
+					<br>
 
-            var location=document.getElementById('location').value;
-            
-           
-            
+					<select class="wrap-input50" id="location" name="location">
+
+						<option  value="" selected disabled hidden >
+
+							Select Location
+
+						</option>                           
+
+						<option  value="USA">USA</option>
+
+						<option value="Singapore">Singapore</option>
+
+					</select>
+
+					<br>
+					<br>
+					<div id="hide1">
+						<select class="wrap-input50" id="server" name="server">
+							<option value=""  selected disabled hidden>
+								Select Server
+							</option>                       
+						</select>
+					</div>
+					<br>
+					<div id="hide2">
+						<select class="wrap-input50" id="authentication" name="authentication" required oninvalid="this.setCustomValidity('Please select a location')" oninput="this.setCustomValidity('')">
+							<option value="" selected disabled hidden>
+								Select Type
+							</option>
+							<option  value="two-factor">Setup two factor authentication</option>
+							<option value="login">Login</option>                       
+						</select>
+					</div>
+					<br>
+					<br>
+					<div class="container-login100-form-btn">
+						<button id="nextButton" class="login100-form-btn" type="submit" >
+							Next
+						</button>
+					</div>
+					
+				</form>
+
+				<div class="login100-more" style="background-image: url('./images/mod10.png');">
+				</div>
+			</div>
+		</div>
+	</div>
+	<script>
+		var nextButton=document.getElementById('nextButton')
+		nextButton.disabled=true
+		nextButton.style.background='#757373'
+
+		var USA=["Server 1"];
+        var singapore=["Server 1"];
+        var server=document.getElementById('server');
+		var country=document.getElementById('location')
+		var authentication=document.getElementById('authentication')
+
+        country.onchange=()=>{
+
+			var location=country.value;
+			
+			console.log(location)
+			
+			nextButton.disabled=false
+
+			nextButton.style.background='#d54900'
+
+			nextButton.onmouseenter=function(){
+
+				nextButton.style.background='#f9712b'
+
+			}
+			nextButton.onmouseleave=function(){
+				nextButton.style.background='#d54900'
+			}
+
+            server.innerHTML=''
             if(location=="USA"){
-              USA.forEach((x)=>{
-              
-                var option=document.createElement('option')
+                USA.forEach((x)=>{    
+                let option=document.createElement('option')
                 option.value=x
                 option.text=x
-            city.appendChild(option)
-              })
-              
+				
+                server.appendChild(option)
+                })
+                
             }
             else{
-              singapore.forEach((x)=>{
-
-                node.appendChild(document.createTextNode(x));
-                city.appendChild(node);
-              })
-              
+                singapore.forEach((x)=>{
+                    let option=document.createElement('option')
+                    option.value=x
+                    option.text=x
+                    server.appendChild(option);
+                })
+                
             }
+                document.getElementById("hide1").style.display='block'
+                document.getElementById("hide2").style.display='block'
 
-            
+        }
 
+		function setAction(form){
+					 
+			if(country.value=='USA' && server.value=='Server 1' && authentication.value=='two-factor'){
+				
+				window.open("https://us-login.ad.citrix.acecloudhosting.com/manageotp", '_blank','location=yes','replace=false');
+	  }
+	  if(country.value=='Singapore' && server.value=='Server 1' && authentication.value=='two-factor'){
+		window.open('https://sgn-login.ad.citrix.acecloudhosting.com/manageotp', '_blank');
+}
 
-            
+      if(country.value=='USA' && server.value=='Server 1' && authentication.value=='login'){
+	
+		window.open('https://us-login.ad.citrix.acecloudhosting.com/', '_blank','location=yes','replace=false');
+				
+			}
 
-
-             document.getElementById("hide").style.display='block'
-          }
-      
-    </script>
-    <script>
-
-
-    </script>
-  </body>
+			if(country.value=='Singapore' && server.value=='Server 1' && authentication.value=='login'){
+				window.open('https://sgn-login.ad.citrix.acecloudhosting.com/', '_blank');
+			}
+	
+        
+		return False
+		}
+          
+		</script>
+		
+</body>
 </html>
